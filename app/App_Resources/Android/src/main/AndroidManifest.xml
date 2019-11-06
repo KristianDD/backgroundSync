@@ -36,5 +36,9 @@
 			</intent-filter>
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
+		<service
+			android:name="com.tns.ForegroundService"
+			android:enabled="true"
+			android:exported="true"></service>
 	</application>
 </manifest>

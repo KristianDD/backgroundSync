@@ -3,6 +3,8 @@ package com.tns;
 import android.content.Context;
 import android.net.LocalServerSocket;
 import android.net.LocalSocket;
+import android.os.Handler;
+import android.os.Message;
 
 import java.io.Closeable;
 import java.io.File;
@@ -19,12 +21,14 @@ public class NativeScriptSyncServiceSocketImpl {
     private final Runtime runtime;
     private static Logger logger;
     private final Context context;
+    private Handler serviceHandler;
 
     private LocalServerSocketThread localServerThread;
     private Thread localServerJavaThread;
 
-    public NativeScriptSyncServiceSocketImpl(Runtime runtime, Logger logger, Context context) {
+    public NativeScriptSyncServiceSocketImpl(Runtime runtime, Logger logger, Context context, Handler handler) {
         this.runtime = runtime;
+        this.serviceHandler = handler;
         NativeScriptSyncServiceSocketImpl.logger = logger;
         this.context = context;
         DEVICE_APP_DIR = this.context.getFilesDir().getAbsolutePath() + "/app";
@@ -174,6 +178,11 @@ public class NativeScriptSyncServiceSocketImpl {
                         validateData();
                         if(runtime != null && doRefreshInt == DO_REFRESH_VALUE) {
                             runtime.runScript(new File(NativeScriptSyncServiceSocketImpl.this.context.getFilesDir(), "internal/livesync.js"), false);
+                            operationReportCode = OPERATION_END_REPORT_CODE;
+                        } else if(serviceHandler != null && doRefreshInt == DO_REFRESH_VALUE) {
+                            Message msg = serviceHandler.obtainMessage();
+                            msg.what = 2;
+                            serviceHandler.dispatchMessage(msg);
                             operationReportCode = OPERATION_END_REPORT_CODE;
                         } else {
                             operationReportCode = OPERATION_END_NO_REFRESH_REPORT_CODE;

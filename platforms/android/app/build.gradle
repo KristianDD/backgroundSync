@@ -471,7 +471,7 @@ tasks.whenTaskAdded({ org.gradle.api.DefaultTask currentTask ->
         extractAllJars.finalizedBy(collectAllJars)
     }
     if (currentTask =~ /compile.+JavaWithJavac/) {
-        currentTask.dependsOn(runSbg)
+        //currentTask.dependsOn(runSbg)
         currentTask.finalizedBy(buildMetadata)
     }
     if (currentTask =~ /merge.*Assets/) {
