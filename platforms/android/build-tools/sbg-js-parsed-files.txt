@@ -1,0 +1,4 @@
+C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\assets\app\bundle.js
+C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\assets\app\runtime.js
+C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\assets\app\tns-java-classes.js
+C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\assets\app\vendor.js

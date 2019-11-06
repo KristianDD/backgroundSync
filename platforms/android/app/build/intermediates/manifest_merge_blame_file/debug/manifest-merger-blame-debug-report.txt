@@ -1,0 +1,94 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.nativescript.backgroundSync"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="17"
+8-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml
+10
+11    <supports-screens
+11-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:7:2-11:33
+12        android:largeScreens="true"
+12-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:10:3-30
+13        android:normalScreens="true"
+13-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:9:3-31
+14        android:smallScreens="true"
+14-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:8:3-30
+15        android:xlargeScreens="true" />
+15-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:11:3-31
+16
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:13:2-76
+17-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:13:19-74
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:14:2-77
+18-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:14:19-75
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:15:2-63
+19-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:15:19-61
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+20-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:16:2-73
+20-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:16:19-71
+21
+22    <application
+22-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:18:2-43:16
+23        android:name="com.tns.NativeScriptApplication"
+23-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:19:3-49
+24        android:allowBackup="true"
+24-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:20:3-29
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.0.1] C:\Users\kddimitrov\.gradle\caches\transforms-2\files-2.1\0ce66f28f15d428e7cb22ee7b459b6ef\core-1.0.1\AndroidManifest.xml:22:18-86
+26        android:debuggable="true"
+27        android:icon="@drawable/icon"
+27-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:21:3-32
+28        android:label="@string/app_name"
+28-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:22:3-35
+29        android:theme="@style/AppTheme" >
+29-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:23:3-34
+30        <activity
+30-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:25:3-37:14
+31            android:name="com.tns.NativeScriptActivity"
+31-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:26:4-47
+32            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|locale|uiMode"
+32-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:28:4-120
+33            android:label="@string/title_activity_kimera"
+33-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:27:4-49
+34            android:theme="@style/LaunchScreenTheme" >
+34-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:29:4-44
+35            <meta-data
+35-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:31:4-87
+36                android:name="SET_THEME_ON_LAUNCH"
+36-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:31:15-49
+37                android:resource="@style/AppTheme" />
+37-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:31:50-84
+38
+39            <intent-filter>
+39-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:33:4-36:20
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:34:5-57
+40-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:34:13-54
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:35:5-65
+42-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:35:15-62
+43            </intent-filter>
+44        </activity>
+45        <activity android:name="com.tns.ErrorReportActivity" />
+45-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:38:3-57
+45-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:38:13-55
+46
+47        <service
+47-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:39:3-42:38
+48            android:name="com.tns.ForegroundService"
+48-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:40:4-44
+49            android:enabled="true"
+49-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:41:4-26
+50            android:exported="true" />
+50-->C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app\src\main\AndroidManifest.xml:42:4-27
+51    </application>
+52
+53</manifest>

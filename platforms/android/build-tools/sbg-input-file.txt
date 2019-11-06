@@ -1,0 +1,1 @@
+C:\work\nativescript-cli\scratch\backgroundSync\platforms\android\app/src/main/assets/app
